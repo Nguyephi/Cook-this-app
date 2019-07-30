@@ -176,7 +176,7 @@ const App = () => {
     })
     const result = await response.json()
     if (result.status === 'ok')
-      window.location.replace("http://localhost:3000/")
+      window.location.replace("https://cook-this-by-phil.herokuapp.com/")
   }
 
   // removes token from sessionStorage.
