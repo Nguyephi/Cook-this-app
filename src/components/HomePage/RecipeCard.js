@@ -222,7 +222,7 @@ export const RecipeCard = ({ recipes, token, handleModal, toggle, handleComment 
                                 timeout="auto"
                                 unmountOnExit
                             >
-                                <CardContent id='cardContent' >
+                                <CardContent id='cardContent' style={{ maxHeight: '20em', overflowY: "auto" }} >
                                     <Typography paragraph>Ingredients:</Typography>
                                     <ul style={{ listStyleType: 'disc' }}>
                                         {ingredientList}
