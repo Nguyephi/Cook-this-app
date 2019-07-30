@@ -52,8 +52,7 @@ const LoginInSignUp = (props) => {
                     handleChangeSignIn={(type, name) => handleChangeSignIn(type, name)}
                 />}
                 <About
-                    {isLogged={isLogged}
-                    clearToken={clearToken}}
+                    {...props}
                 />
             </div>
             <Footer />
