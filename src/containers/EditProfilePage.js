@@ -29,7 +29,7 @@ const EditProfilePage = ({ isLogged, clearToken, token, user }) => {
 
     const postImgUrl = async (imgUrl) => {
         console.log('what is the imgurl', imgUrl)
-        await fetch('https://127.0.0.1:5000/postuserphoto', {
+        await fetch('https://cook-this-by-phil.herokuapp.com/postuserphoto', {
             method: 'POST',
             headers: new Headers({
                 'Content-Type': 'application/json',
