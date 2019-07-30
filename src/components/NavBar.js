@@ -1,47 +1,44 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+import Icon from '@material-ui/core/Icon'
 
-function NavBar() {
+const NavBar = ({ clearToken }) => {
+
     return (
-        <header id="header">
-            <div class="container">
-                <div id="logo" class="pull-left">
+        <header style={{ position: 'fixed', top: 0, width: '100%', zIndex: '999', height: '60px' }} id="header">
+            <div className="container">
+                <div id="logo" className="pull-left">
                     <a href="/"><img src="img/Cook_this_logo.png" alt="" title="" /></a>
                 </div>
+                <nav className="nav social-nav pull-right">
+                    <Link to='/createrecipe'><Icon>add</Icon></Link>
+                    <Link to='/userprofile'><Icon>person</Icon></Link>
+                    <a onClick={clearToken} style={{ fontSize: '17px', marginTop: '4px' }}>Log out</a>
 
-                <nav id="nav-menu-container">
-                    <ul class="nav-menu">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#team">Team</a></li>
-                        <li class="menu-has-children"><a href="">Drop Down</a>
-                            <ul>
-                                <li><a href="#">Drop Down 1</a></li>
-                                <li class="menu-has-children"><a href="#">Drop Down 2</a>
-                                    <ul>
-                                        <li><a href="#">Deep Drop Down 1</a></li>
-                                        <li><a href="#">Deep Drop Down 2</a></li>
-                                        <li><a href="#">Deep Drop Down 3</a></li>
-                                        <li><a href="#">Deep Drop Down 4</a></li>
-                                        <li><a href="#">Deep Drop Down 5</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Drop Down 3</a></li>
-                                <li><a href="#">Drop Down 4</a></li>
-                                <li><a href="#">Drop Down 5</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </nav>
-
-                <nav class="nav social-nav pull-right d-none d-lg-inline">
-                    <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i
-                        class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
                 </nav>
             </div>
         </header>
     )
-}
+    // } else {
+    //     return (
+    //         <header id="header">
+    //             <div className="container">
+    //                 <div id="logo" className="pull-left">
+    //                     <a href="/"><img src="img/Cook_this_logo.png" alt="" title="" /></a>
+    //                 </div>
 
+    //                 {!isLogged && <nav className="nav social-nav pull-right d-none d-lg-inline">
+    //                     <a href="#"><i className="fa fa-twitter"></i></a> <a href='https://127.0.0.1:5000/login/facebook'><i className="fa fa-facebook"></i></a> <a href="#"><i
+    //                         className="fa fa-linkedin"></i></a> <a href="#"><i className="fa fa-envelope"></i></a>
+    //                 </nav>}
+    //                 {isLogged && <nav className="nav social-nav pull-right d-none d-lg-inline"><a onClick={clearToken}>Log out</a>
+    //                     <a href='/createrecipe'><i className="far fa-plus-square"></i></a>
+    //                     <Link to='/userprofile'><i className="fas fa-user-circle"></i>{user.name}</Link>
+
+    //                 </nav>}
+    //             </div>
+    //         </header>
+    //     )
+    // }
+}
 export default NavBar
