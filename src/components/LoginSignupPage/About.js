@@ -4,7 +4,7 @@ const About = ({ isLogged, clearToken }) => {
     const [totalUsers, setTotalUsers] = useState()
     const [totalRecipes, setTotalRecipes] = useState()
 
-    const getTotal = () => {
+    const getTotal = async() => {
         const response = await fetch(`https://cook-this-by-phil.herokuapp.com/gettotal`, {
             method: 'GET',
             headers: new Headers({
