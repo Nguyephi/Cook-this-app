@@ -4,6 +4,8 @@ import EditProfileForm from '../components/EditProfilePage/EditProfileForm'
 import Dropzone from "react-dropzone";
 import request from "superagent";
 
+const defaultPP = require('../assets/img/default.png')
+
 const EditProfilePage = ({ isLogged, clearToken, token, user }) => {
     const [uploadedFile, setUploadedFile] = useState([])
     const [imgUrl, setImgUrl] = useState('')
@@ -42,13 +44,13 @@ const EditProfilePage = ({ isLogged, clearToken, token, user }) => {
     }
 
     const userImg = () => {
-        if (user.avatar !== '') {
+        if (user.avatar !== '' || user.avatar !== null) {
             return (<div className='d-flex mr-3'>
                 <img src={user.avatar} style={{ width: 60, height: 60, borderRadius: '50%' }} />
             </div>)
         } else {
-            return (<div className='d-flex justify-content-center'>
-                <p className="h3">No profile pic</p>
+            return (<div className='d-flex mr-3'>
+                <img src={defaultPP} style={{ width: 60, height: 60, borderRadius: '50%' }} />
             </div>)
         }
     }

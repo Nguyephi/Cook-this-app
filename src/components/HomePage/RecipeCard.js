@@ -19,7 +19,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import moment from 'moment'
 
 
-const test = require('../../assets/img/test.jpg')
+const defaultPP = require('../../assets/img/default.jpg')
 // import CreateRecipePage from '../../containers/CreateRecipePage';
 
 const useStyles = makeStyles(theme => ({
@@ -120,9 +120,6 @@ export const RecipeCard = ({ recipes, token, handleModal, toggle, handleComment 
         }
     }
     
-
-
-
     const renderCardData = () => {
         if (recipes) {
             const renderCardData = recipes.map((i, idx) => {
@@ -163,9 +160,7 @@ export const RecipeCard = ({ recipes, token, handleModal, toggle, handleComment 
                                     i.creator_avatar ?
                                         <img src={i.creator_avatar} style={{ height: '45px', width: '45px', borderRadius: '50%' }} />
                                         :
-                                        <Avatar aria-label="Recipe" className={classes.avatar}>
-                                            C
-                                    </Avatar>
+                                        <img src={defaultPP} style={{ height: '45px', width: '45px', borderRadius: '50%' }} />
                                 }
 
                                 title={i.title}
@@ -179,7 +174,7 @@ export const RecipeCard = ({ recipes, token, handleModal, toggle, handleComment 
                                     </IconButton>
                                 }
                             />
-                            <img src={i.imgUrl ? `${i.imgUrl}` : `${test}`} style={{ width: '100%', height: '525px', objectFit: 'cover' }} />
+                            <img src={i.imgUrl ? `${i.imgUrl}` : `${default}`} style={{ width: '100%', height: '525px', objectFit: 'cover' }} />
                             <CardContent>
                                 <Typography className="pt-3" variant="body2" color="textSecondary" component="p">
                                     {i.description}

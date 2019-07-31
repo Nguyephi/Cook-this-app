@@ -30,8 +30,6 @@ const LoginInSignUp = (props) => {
         window.location.replace('https://cook-this-by-phil.herokuapp.com/login/facebook')
     }
 
-
-
     return (
         <div>
             {/* <NavBar

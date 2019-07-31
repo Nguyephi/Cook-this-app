@@ -3,6 +3,8 @@ import Navbar from '../components/NavBar'
 import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
 
+const defaultPP = require('../assets/img/default.png')
+
 const UserProfilePage = ({ isLogged, clearToken, user, token, toggleSubscriber, toggleSubscribing, recipes }) => {
  
     const postImgMap = () => {
@@ -37,7 +39,7 @@ const UserProfilePage = ({ isLogged, clearToken, user, token, toggleSubscriber, 
                     <div className='col-4 text-center'>
                         {user.avatar ?
                             <img src={user.avatar} style={{ height: '9.6em', width: '9.6em', borderRadius: '50%' }} />
-                            : null
+                            : <img src={defaultPP} style={{ height: '9.6em', width: '9.6em', borderRadius: '50%' }} />
                         }
 
                     </div>

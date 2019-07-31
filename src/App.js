@@ -11,13 +11,10 @@ import HomePageModal from './components/HomePageModal'
 import UserSubscriberModal from './components/UserSubscriberModal'
 import UserSubscribingModal from './components/UserSubscribingModal'
 import OtherProfilePage from './containers/OtherProfilePage'
-
-// import Test from './containers/Test'
 import NotFound from './components/NotFound'
 import { ProtectedRoute } from "./services/ProtectedRoute";
 import { BeatLoader } from 'react-spinners';
 import { css } from '@emotion/core'
-// import NavBar from './components/NavBar'
 
 function Index() {
   return <h2>Home</h2>;

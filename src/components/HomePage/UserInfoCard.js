@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { Card } from 'react-bootstrap'
 import { directive } from '@babel/types';
 
+const defaultPP = require('../../assets/img/default.png')
+
 export const UserInfoCard = ({ user }) => {
     return (
         <div >
@@ -10,8 +12,8 @@ export const UserInfoCard = ({ user }) => {
                 <div className='d-flex' style={{ justifyContent: 'space-evenly' }}>
                     <div>
                         <Link to='/userprofile'>{user.avatar ?
-                            <img src={user.avatar} style={{ height: '50px', width: '50px', borderRadius: '50%', marginTop: '.25em' }} />
-                            : null
+                            <img src={user.avatar} style={{ height: '50px', width: '50px', borderRadius: '50%'}} />
+                            : <img src={defaultPP} style={{ height: '50px', width: '50px', borderRadius: '50%'}} />
                         }
                         </Link>
                     </div>

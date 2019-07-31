@@ -10,16 +10,9 @@ const HomePage =
     }) => {
 
         const [modal, setModal] = useState()
-        // const [recipeIdx, setRecipeIdx] = useState()
-        // console.log('lucky222', recipe.post_id)
 
         return (
             <div>
-                {/* <NavBar
-                    user={user}
-                    isLogged={isLogged}
-                    clearToken={clearToken}
-                /> */}
                 <div className='container pt-5'>
                     <div className='row' style={{ marginTop: 65 }}>
                         <div className="col-4">
