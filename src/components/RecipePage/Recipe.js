@@ -154,7 +154,7 @@ const Recipe = ({ recipe, handleComment }) => {
                                     src={test}
                                     title="Paella dish"
                                 /> */}
-                                <img src={recipe.imgUrl ? `${recipe.imgUrl}` : null style={{ width: '100%', height: '525px', objectFit: 'cover' }} />
+                                <img src={recipe.imgUrl ? `${recipe.imgUrl}` : null} style={{ width: '100%', height: '525px', objectFit: 'cover' }} />
                             </div>
                             <div style={{ maxWidth: '30%', borderLeft: '1px solid lightgrey' }}>
                                 <CardHeader
