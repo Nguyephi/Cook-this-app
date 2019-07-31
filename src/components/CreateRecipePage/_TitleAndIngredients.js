@@ -72,7 +72,7 @@ const _TitleAndIngredients = ({ values, handleChange, nextStep, dispatchIngredie
                                             )
                                             :
                                             <div style={{ width: "100%", height: 300, justifyContent: "center", alignItems: "center", display: "flex", border: "1px solid rgba(0, 0, 0, 0.23)", borderRadius: "4px" }}>
-                                                <a className="btn" style={{ color: 'black', textAlign: 'center' }}>
+                                                <a style={{ color: 'lightgey', textAlign: 'center' }}>
                                                     <i className="fas fa-camera-retro" />
                                                     &nbsp;
                                                     <strong>Drag or click here to upload you image</strong>
