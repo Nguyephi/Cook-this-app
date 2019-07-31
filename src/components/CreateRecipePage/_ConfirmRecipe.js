@@ -44,7 +44,7 @@ const _ConfirmRecipe = ({ values, nextStep, prevStep, dispatchIngredients, dispa
         <MuiThemeProvider>
             <div className='d-flex justify-content-center'>
                 <div className='text-center w-50'>
-                    <CardHeader id='recipeCardHeader' title="Confirm your recipe" style={{ backgroundColor: 'red', color: 'white' }} />
+                    <CardHeader id='recipeCardHeader' title="Confirm your recipe" style={{ backgroundColor: '#7C0B2B', color: 'white' }} />
                     <Card>
                         <CardContent>
                             <div className='container mt-4'>

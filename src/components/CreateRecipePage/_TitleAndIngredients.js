@@ -38,7 +38,7 @@ const _TitleAndIngredients = ({ values, handleChange, nextStep, dispatchIngredie
         <MuiThemeProvider>
             <div className='d-flex justify-content-center'>
                 <div className='text-center w-50'>
-                    <CardHeader id='recipeCardHeader' title="Recipe info" style={{ backgroundColor: 'red', color: 'white' }} />
+                    <CardHeader id='recipeCardHeader' title="Recipe info" style={{ backgroundColor: '#7C0B2B', color: 'white' }} />
                     <div className='container mt-4'>
                         <input
                             type="text"

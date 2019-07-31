@@ -32,7 +32,7 @@ const _HowToMake = ({ values, nextStep, prevStep, dispatchInstructions, handleAd
         <MuiThemeProvider>
             <div className='d-flex justify-content-center'>
                 <div className='text-center w-50'>
-                    <CardHeader id='recipeCardHeader' title="How is it made?" style={{ backgroundColor: 'red', color: 'white' }} />
+                    <CardHeader id='recipeCardHeader' title="How is it made?" style={{ backgroundColor: '#7C0B2B', color: 'white' }} />
                     <div className='container mt-4'>
                         <form onSubmit={(e) => clearInput(e)}>
                             <input
