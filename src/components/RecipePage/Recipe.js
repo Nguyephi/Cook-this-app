@@ -159,8 +159,8 @@ const Recipe = ({ recipe, handleComment }) => {
                             <div style={{ maxWidth: '30%', borderLeft: '1px solid lightgrey' }}>
                                 <CardHeader
                                     avatar={
-                                        i.creator_avatar ?
-                                            <img src={i.creator_avatar} style={{ height: '45px', width: '45px', borderRadius: '50%' }} />
+                                        recipe.creator_avatar ?
+                                            <img src={recipe.creator_avatar} style={{ height: '45px', width: '45px', borderRadius: '50%' }} />
                                             :
                                             <img src={defaultPP} style={{ height: '45px', width: '45px', borderRadius: '50%' }} />
                                     }
