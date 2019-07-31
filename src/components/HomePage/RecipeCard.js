@@ -174,7 +174,7 @@ export const RecipeCard = ({ recipes, token, handleModal, toggle, handleComment 
                                     </IconButton>
                                 }
                             />
-                            <img src={i.imgUrl ? `${i.imgUrl}` : `${default}`} style={{ width: '100%', height: '525px', objectFit: 'cover' }} />
+                            <img src={i.imgUrl ? `${i.imgUrl}` : null} style={{ width: '100%', height: '525px', objectFit: 'cover' }} />
                             <CardContent>
                                 <Typography className="pt-3" variant="body2" color="textSecondary" component="p">
                                     {i.description}
