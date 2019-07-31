@@ -19,7 +19,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import moment from 'moment'
 
 
-const defaultPP = require('../../assets/img/default.jpg')
+const defaultPP = require('../../assets/img/default.png')
 // import CreateRecipePage from '../../containers/CreateRecipePage';
 
 const useStyles = makeStyles(theme => ({
