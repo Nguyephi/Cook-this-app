@@ -44,7 +44,7 @@ const EditProfilePage = ({ isLogged, clearToken, token, user }) => {
     }
 
     const userImg = () => {
-        if (user.avatar !== '' || user.avatar !== null) {
+        if (user.avatar) {
             return (<div className='d-flex mr-3'>
                 <img src={user.avatar} style={{ width: 60, height: 60, borderRadius: '50%' }} />
             </div>)
