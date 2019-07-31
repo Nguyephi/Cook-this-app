@@ -163,6 +163,7 @@ const App = () => {
     getUserData()
     getRecipeData()
     getSubscription()
+    console.log('wayyyyy up i feel blessed', window)
   }, [token])
   // console.log('userdata', userData)
 
@@ -187,7 +188,8 @@ const App = () => {
   }
 
   const handleModal = async (recipeArg, idx) => {
-    console.log('recipearfrgggg', recipeArg)
+    // console.log('yeeeezyyyyy')
+    // console.log('recipearfrgggg', recipeArg)
     setRecipe(recipeArg)
     setRecipeIdx(idx);
     // await localStorage.setItem('localrecipe', JSON.stringify(recipeArg))
@@ -206,7 +208,7 @@ const App = () => {
   }
 
   const sendSubscription = async () => {
-    console.log('sendSubscription')
+    // console.log('sendSubscription')
     await fetch('https://cook-this-by-phil.herokuapp.com/usersubscribe', {
       method: 'POST',
       headers: new Headers({
@@ -223,7 +225,7 @@ const App = () => {
   const handleViewPost = async (id) => {
     toggle()
     recipeData.find(recipe => recipe.id == id)
-    console.log('reciees of this id', id)
+    // console.log('reciees of this id', id)
     const response = await fetch(`https://cook-this-by-phil.herokuapp.com/singlerecipedata/${id}`, {
       method: 'GET',
       headers: new Headers({
@@ -232,7 +234,7 @@ const App = () => {
       })
     })
     const result = await response.json()
-    console.log('see result', result)
+    // console.log('see result', result)
     setRecipe(result)
     // setIsShowing(false)
   }
@@ -264,6 +266,8 @@ const App = () => {
       })
     })
   }
+
+
 
   if (!loading) {
     return (
@@ -325,7 +329,7 @@ const App = () => {
               toggleSubscribing={toggleSubscribing}
             />}
           />
-          <ProtectedRoute exact path='/user/:id'
+          <ProtectedRoute exact path={`/user/:id`}
             component={() => {
               return (
                 <OtherProfilePage
@@ -355,7 +359,7 @@ const App = () => {
               token={token}
             />}
           />
-          <ProtectedRoute exact path='/recipe/:id'
+          <ProtectedRoute exact path={`/recipe/:id`}
             component={() => {
               return (
                 <RecipePage
@@ -370,15 +374,6 @@ const App = () => {
               )
             }}
           />
-          {/* <ProtectedRoute exact path='/test'
-            component={() => <Test
-              isLogged={isLogged}
-              user={userData}
-              recipes={recipeData}
-              clearToken={clearToken}
-              token={token}
-            />}
-          /> */}
           <Route component={NotFound} />
         </Switch>
         <HomePageModal

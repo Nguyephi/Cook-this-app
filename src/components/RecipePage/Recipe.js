@@ -73,16 +73,6 @@ const Recipe = ({ recipe, handleComment }) => {
         setCreatedBy(result.created_by)
     }
 
-
-    // const setLocalRecipe = async () => {
-    // await localStorage.setItem('localrecipe', JSON.stringify(recipe))
-    //     let localRecipe = await localStorage.getItem('localrecipe')
-    //     localRecipe = await JSON.parse(localRecipe)
-    //     setThisRecipe(localRecipe)
-    //     setIngredients(localRecipe.ingredients)
-    //     setInstructions(localRecipe.instructions)
-    //     setComments(localRecipe.comments)
-    // }
     const [expanded, setExpanded] = React.useState(false);
 
     function handleExpandClick() {
@@ -190,7 +180,7 @@ const Recipe = ({ recipe, handleComment }) => {
                                 </CardContent>
 
                                 <Collapse in={expanded} timeout="auto" unmountOnExit>
-                                    <CardContent style={{ height: '13em', overflowY: 'auto'}}>
+                                    <CardContent style={{ height: '13em', overflowY: 'auto' }}>
                                         <Typography paragraph>Ingredients:</Typography>
 
                                         <ul className='pl-3' style={{ listStyle: 'none' }}>

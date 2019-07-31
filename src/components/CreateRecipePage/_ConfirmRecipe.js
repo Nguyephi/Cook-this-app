@@ -11,7 +11,6 @@ const _ConfirmRecipe = ({ values, nextStep, prevStep, dispatchIngredients, dispa
 
     const continueForm = (e) => {
         e.preventDefault();
-        nextStep();
         postRecipe()
     };
 
@@ -32,6 +31,8 @@ const _ConfirmRecipe = ({ values, nextStep, prevStep, dispatchIngredients, dispa
         })
         const result = await response.json()
         localStorage.removeItem('recipe')
+        window.location.replace("https://cookthis.netlify.com")
+
     }
 
     const back = e => {

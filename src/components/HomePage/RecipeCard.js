@@ -76,13 +76,13 @@ export const RecipeCard = ({ recipes, token, handleModal, toggle, handleComment 
                 booleanArr.push(true)
             }
         })
-        console.log(booleanArr)
+        // console.log(booleanArr)
         return booleanArr
     }
     const [likesBooleanArr, setLikesBooleanArr] = useState(isLikeBooleanArr())
 
     function handleLikeClick(recipe, idx) {
-        console.log('what is recipe', recipe)
+        // console.log('what is recipe', recipe)
         let newArr = likesBooleanArr.slice(0)
         newArr[idx] = !newArr[idx]
         setLikesBooleanArr(newArr)
@@ -92,7 +92,7 @@ export const RecipeCard = ({ recipes, token, handleModal, toggle, handleComment 
     const postLikes = async (id, idx) => {
         let newArr = likesBooleanArr.slice(0)
         newArr[idx] = !newArr[idx]
-        console.log('uduud', id)
+        // console.log('uduud', id)
         const response = await fetch('https://cook-this-by-phil.herokuapp.com/postliked', {
             method: 'POST',
             headers: new Headers({
@@ -114,12 +114,12 @@ export const RecipeCard = ({ recipes, token, handleModal, toggle, handleComment 
         e.preventDefault()
         if (value.length > 0) {
             setCommentArr(commentArr.push([...comments]))
-            console.log('arrrrr', comments)
+            // console.log('arrrrr', comments)
             handleComment(id, value)
             setComment('')
         }
     }
-    console.log('hihihihihi', commentArr)
+    
 
 
 
@@ -179,12 +179,6 @@ export const RecipeCard = ({ recipes, token, handleModal, toggle, handleComment 
                                     </IconButton>
                                 }
                             />
-
-                            {/* <CardMedia
-                                className={classes.media}
-                                image={i.imgUrl}
-                                title="Recipe image"
-                            /> */}
                             <img src={i.imgUrl ? `${i.imgUrl}` : `${test}`} style={{ width: '100%', height: '525px', objectFit: 'cover' }} />
                             <CardContent>
                                 <Typography className="pt-3" variant="body2" color="textSecondary" component="p">
@@ -280,10 +274,8 @@ export const RecipeCard = ({ recipes, token, handleModal, toggle, handleComment 
 
 
     return (
-        // <div className='py-2 '>
         <div>
             {renderCardData()}
-            {/* <HomePageModal sendSubscription={sendSubscription} /> */}
         </div>
     )
 }
