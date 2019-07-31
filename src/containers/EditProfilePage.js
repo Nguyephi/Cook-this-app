@@ -97,7 +97,7 @@ const EditProfilePage = ({ isLogged, clearToken, token, user }) => {
                                             return (
                                                 <div {...getRootProps()}>
                                                     <input {...getInputProps()} />
-                                                    <div className='mb-3' style={{ clear:left, justifyContent: "center", alignItems: "center", display: "flex" }}>
+                                                    <div className='mb-3' style={{ clear:'left', justifyContent: "center", alignItems: "center", display: "flex" }}>
                                                         <a>
                                                             <strong className='blue-text'>Change Profile Photo</strong>
                                                         </a>
