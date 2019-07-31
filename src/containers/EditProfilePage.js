@@ -47,7 +47,11 @@ const EditProfilePage = ({ isLogged, clearToken, token, user }) => {
             return (<div className='d-flex mr-3'>
                 <img src={user.avatar} style={{ width: 60, height: 60, borderRadius: '50%' }} />
             </div>)
-        } else {
+        } else if (imgUrl) {
+            return (<div className='d-flex mr-3'>
+                <img src={imgUrl} style={{ width: 60, height: 60, borderRadius: '50%' }} />
+            </div>)
+        }  else {
             return (<div className='d-flex mr-3'>
                 <img src={defaultPP} style={{ width: 60, height: 60, borderRadius: '50%' }} />
             </div>)
