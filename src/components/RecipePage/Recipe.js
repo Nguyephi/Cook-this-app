@@ -18,7 +18,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import moment from 'moment'
 import { async } from 'q';
 
-const default = require('../../assets.img.default.png')
+const defaultPP = require('../../assets.img.default.png')
 
 const useStyles = makeStyles(theme => ({
     card: {
@@ -154,14 +154,15 @@ const Recipe = ({ recipe, handleComment }) => {
                                     src={test}
                                     title="Paella dish"
                                 /> */}
-                                <img src={recipe.imgUrl ? `${recipe.imgUrl}` : `${default}`} style={{ width: '100%', height: '525px', objectFit: 'cover' }} />
+                                <img src={recipe.imgUrl ? `${recipe.imgUrl}` : null style={{ width: '100%', height: '525px', objectFit: 'cover' }} />
                             </div>
                             <div style={{ maxWidth: '30%', borderLeft: '1px solid lightgrey' }}>
                                 <CardHeader
                                     avatar={
-                                        <Avatar aria-label="Recipe" className={classes.avatar}>
-                                            R
-                                        </Avatar>
+                                        i.creator_avatar ?
+                                            <img src={i.creator_avatar} style={{ height: '45px', width: '45px', borderRadius: '50%' }} />
+                                            :
+                                            <img src={defaultPP} style={{ height: '45px', width: '45px', borderRadius: '50%' }} />
                                     }
                                     action={
                                         <IconButton aria-label="Settings">
