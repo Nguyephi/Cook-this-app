@@ -18,7 +18,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import moment from 'moment'
 import { async } from 'q';
 
-const defaultPP = require('../../assets.img.default.png')
+const defaultPP = require('../../assets/img/default.png')
 
 const useStyles = makeStyles(theme => ({
     card: {
