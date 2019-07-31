@@ -9,7 +9,6 @@ const defaultPP = require('../assets/img/default.png')
 const EditProfilePage = ({ isLogged, clearToken, token, user }) => {
     const [uploadedFile, setUploadedFile] = useState([])
     const [imgUrl, setImgUrl] = useState('')
-    console.log('psiderman', user.avatar)
 
     const handleImgDrop = files => {
         setUploadedFile(files[0])
@@ -86,7 +85,7 @@ const EditProfilePage = ({ isLogged, clearToken, token, user }) => {
                             <div style={{ display: '-webkit-inline-box', width: '75%', padding: '0 65px' }}>
                                 {userImg()}
                                 <div style={{ height: '70px' }}>
-                                    <div className='h4'>
+                                    <div className='h4 pull-left'>
                                         {user.username}
                                     </div>
                                     <Dropzone
@@ -98,7 +97,7 @@ const EditProfilePage = ({ isLogged, clearToken, token, user }) => {
                                             return (
                                                 <div {...getRootProps()}>
                                                     <input {...getInputProps()} />
-                                                    <div className='mb-3' style={{ justifyContent: "center", alignItems: "center", display: "flex" }}>
+                                                    <div className='mb-3' style={{ clear:left, justifyContent: "center", alignItems: "center", display: "flex" }}>
                                                         <a>
                                                             <strong className='blue-text'>Change Profile Photo</strong>
                                                         </a>
