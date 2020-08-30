@@ -8,7 +8,7 @@ Share posts of food creations with photos and recipes.
 
 ## Video Walkthrough
 
-![alt-text]("./CookthisDemo.gif")
+![Cook-this-demo]("CookthisDemo.gif")
 
 ## User Stories
 
