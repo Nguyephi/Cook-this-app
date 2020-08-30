@@ -8,6 +8,8 @@ Share posts of food creations with photos and recipes.
 
 ## Video Walkthrough
 
+![alt-text]("./CookthisDemo.gif")
+
 ## User Stories
 
 The following **required** functionalities are completed (this is a sample):
