@@ -1,20 +1,12 @@
-# CoderSchool FTW - * Name of Your Project Here *
+# Cook this
 
 Created with love by: `Philip Nguyen`
 
-View online at: `Your URL here`
+View online at: `https://cookthis.netlify.app/`
 
-One or two sentence summary of your project. 
+Share posts of food creations with photos and recipes. 
 
 ## Video Walkthrough
-
-Here's a walkthrough of implemented user stories.
-
-To create a GIF, use [LiceCap](http://www.cockos.com/licecap/), [RecordIt](http://www.recordit.co), or [Loom](http://www.useloom.com), and link the image here in the markdown.
-
-```
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-```
 
 ## User Stories
 
@@ -41,9 +33,11 @@ The following **additional** features are implemented:
 
 ## Time Spent and Lessons Learned
 
-Time spent: **X** hours spent in total.
+Time spent: 2 weeks spent in total.
 
-Describe any challenges encountered while building the app.
+Created custom sign in and FB oAuth, with error handling
+Architected APIs to dynamically render users post, with like and comment feature
+Deployed server-side on Heroku with PostgreSQL and client-side on Netlify
 
 ## License
 
