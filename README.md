@@ -29,10 +29,6 @@ The following **optional** features are implemented:
 * [ ] Bootstrap carousel for banner
 * [ ] Banner with background video
 
-The following **additional** features are implemented:
-
-* [x] List anything else that you can get done to improve the page!
-
 ## Time Spent and Lessons Learned
 
 Time spent: 2 weeks spent in total.
