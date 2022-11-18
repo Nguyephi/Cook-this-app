@@ -16,7 +16,7 @@
     "react-google-login": "^5.0.4",
     "react-modal": "^3.9.1",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "react-spinners": "^0.5.13",
     "superagent": "^5.1.0"
   },
